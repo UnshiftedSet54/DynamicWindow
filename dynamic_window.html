@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+</head>
+
+<body>
+
+    <button id="btn">Window!</button>
+
+    <div id="overlay"
+        style="position: absolute;margin: auto;top: 0;left: 0;width: 100%;height: 100vh;z-index: 10;background-color: rgba(0, 0, 0, 0.5);">
+    </div>
+
+    <div id="window" style="min-width:218px;min-height: 376px;top: 100px;left: 100px;width: 500px;height: 400px;"
+        tabindex="-1">
+
+        <div id="window-header">
+            <div id="window-header-empty"></div>
+            <p id="window-header-options"><span id="maximizar">&plus;</span><span id="minimizar">&minus;</span><span
+                    id="cerrar">&times;</span></p>
+        </div>
+
+        <div id="window-content">
+            <h1>Calculadora Online</h1>
+            <div class="calc-div">
+                <form enctype="multipart/form-data" method="post" name="fileinfo">
+                    <label>X: </label> <input id="x" name="x1" type="number">
+                    <label>Y: </label> <input id="y" name="y1" type="number">
+                </form>
+            </div>
+            <div class="calc-div">
+                <button class="boton" id="Sumar">Sumar</button>
+                <button class="boton" id="Restar">Restar</button>
+                <button class="boton" id="multipl">Multiplicar</button>
+                <button class="boton" id="dividir">Dividir</button>
+            </div>
+            <div class="calc-div">
+                <label>Respuesta: </label>
+                <textarea id="txt" draggable="false" readonly></textarea>
+            </div>
+        </div>
+    </div>
+
+    <script id="mouse-drag/drop" src="window.js"></script>
+    <script id="calc-functionality" src="calculadora.js"></script>
+
+</body>
+
+</html>
