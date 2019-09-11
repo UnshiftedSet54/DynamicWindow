@@ -42,8 +42,8 @@ btnDividir.onclick = () => {
 } */
 
 function reqOperation(op) {
-    var x1 = document.getElementById("x").value;
-    var y1 = document.getElementById("y").value;
+    var x1 = parseInt(document.getElementById("x").value);
+    var y1 = parseInt(document.getElementById("y").value);
 
     switch (op) {
         case "suma":
