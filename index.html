@@ -10,44 +10,43 @@
 
 <body>
 
-    <button id="btn">Window!</button>
+    <button class="btn">Window!</button>
 
-    <div id="overlay"
+    <div class="overlay"
         style="position: absolute;margin: auto;top: 0;left: 0;width: 100%;height: 100vh;z-index: 10;background-color: rgba(0, 0, 0, 0.5);">
     </div>
 
-    <div id="window" style="min-width:218px;min-height: 376px;top: 100px;left: 100px;width: 500px;height: 400px;"
-        tabindex="-1">
+    <div class="window" tabindex="-1">
 
-        <div id="window-header">
-            <div id="window-header-empty"></div>
-            <p id="window-header-options"><span id="maximizar">&plus;</span><span id="minimizar">&minus;</span><span
-                    id="cerrar">&times;</span></p>
+        <div class="window-header">
+            <p class="window-header-options"><span class="min-max" id="max">&plus;</span><span class="min-max" id="min">&minus;</span><span
+                    class="cerrar" id="close">&times;</span></p>
         </div>
 
-        <div id="window-content">
-            <h1>Calculadora Online</h1>
+        <div class="window-content">
+            <div class="container">
+                <h1 class="calc-div">Calculadora Online</h1>
             <div class="calc-div">
                 <form enctype="multipart/form-data" method="post" name="fileinfo">
-                    <label>X: </label> <input id="x" name="x1" type="number">
-                    <label>Y: </label> <input id="y" name="y1" type="number">
+                    <div><label>X: </label> <input id="x" name="x1" type="number" value="0"></div>
+                    <div><label>Y: </label> <input id="y" name="y1" type="number" value="0"></div>
                 </form>
             </div>
-            <div class="calc-div">
+            <div class="calc-div actions">
                 <button class="boton" id="Sumar">Sumar</button>
                 <button class="boton" id="Restar">Restar</button>
                 <button class="boton" id="multipl">Multiplicar</button>
                 <button class="boton" id="dividir">Dividir</button>
             </div>
             <div class="calc-div">
-                <label>Respuesta: </label>
-                <textarea id="txt" draggable="false" readonly></textarea>
+                <label>Respuesta: <span id="result">0</span></label>
+            </div>
             </div>
         </div>
     </div>
 
-    <script id="mouse-drag/drop" src="window.js"></script>
-    <script id="calc-functionality" src="calculadora.js"></script>
+    <script class="mouse-drag/drop" src="window.js"></script>
+    <script class="calc-functionality" src="calculadora.js"></script>
 
 </body>
 
